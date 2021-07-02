@@ -4,7 +4,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_localisation/stacked_localisation.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-class HomeViewModel extends BaseViewModel with LocalisedClass {
+class HomeViewModel extends BaseViewModel with LocalisedMixin {
   final _dialogService = locator<DialogService>();
 
   Future handleDialog() async {

@@ -1,3 +1,9 @@
+## 0.2.3
+
+- Updated dependencies
+- Organized code and package file structure
+- `assets/lang` -> `assets/l10n`
+
 ## 0.2.2
 
 - Cleaned up the initialisation logic to use the singleton pattern instead of relying on the user to call the function for setup

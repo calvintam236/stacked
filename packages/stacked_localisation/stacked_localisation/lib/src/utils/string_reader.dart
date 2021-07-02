@@ -12,14 +12,14 @@ class StringReader {
     String stringContent;
 
     try {
-      stringContent = await rootBundle.loadString('assets/lang/$locale.json');
+      stringContent = await rootBundle.loadString('assets/l10n/$locale.json');
     } catch (_) {
-      var majorOnly = locale.split('_').first;
+      String majorOnly = locale.split('_').first;
       stringContent =
-          await rootBundle.loadString('assets/lang/$majorOnly.json');
+          await rootBundle.loadString('assets/l10n/$majorOnly.json');
     }
 
-    var flattenedMap = flattenMap(json.decode(stringContent));
+    dynamic flattenedMap = flattenMap(jsonDecode(stringContent));
     return flattenedMap;
   }
 }

@@ -9,7 +9,7 @@ import 'package:yaml/yaml.dart';
 import 'map_utils.dart';
 
 class LocalisationStringKeyGenerator implements Builder {
-  static final _allLanguageFiles = new Glob('assets/lang/*');
+  static final _allLanguageFiles = new Glob('assets/l10n/*');
 
   static AssetId _stringKeysOutput(BuildStep buildStep) {
     return AssetId(

@@ -5,10 +5,10 @@ import 'package:stacked_localisation/src/mixins/localised_class.dart';
 
 import 'test_helpers.dart';
 
-class LocalisationModel with LocalisedClass {}
+class LocalisationModel with LocalisedMixin {}
 
 void main() {
-  group('LocalisedClassTest -', () {
+  group('LocalisedMixinTest -', () {
     setUp(() => registerServices());
     tearDown(() => unregisterServices());
 

@@ -21,11 +21,11 @@ dev_dependencies:
   stacked_localisation_generator:
 ```
 
-Then we will add a new asset entry into pubspec.yaml that points to the `assets/lang` folder (You will create this folder if it doesn't exist).
+Then we will add a new asset entry into pubspec.yaml that points to the `assets/l10n` folder (You will create this folder if it doesn't exist).
 
 ```yaml
 assets:
-  - assets/lang/
+  - assets/l10n/
 ```
 
 Then we will create the folders mentioned above and place your strings for a different language in there. Create a folder called assets in the root folder and inside that folder create a new folder called lang. Then create a new file inside it called en.json or en.yaml and place the following JSON in there.
@@ -121,10 +121,10 @@ class HomeView extends StatelessWidget {
 }
 ```
 
-You'll see the usage of the translate function on the model. Lets add that functionality. Open up your `ViewModel` file and add the `LocalisedClass` mixin to your `ViewModel` definition.
+You'll see the usage of the translate function on the model. Lets add that functionality. Open up your `ViewModel` file and add the `LocalisedMixin` mixin to your `ViewModel` definition.
 
 ```dart
-class HomeViewModel extends BaseViewModel with LocalisedClass {}
+class HomeViewModel extends BaseViewModel with LocalisedMixin {}
 ```
 
 This provides you with a translate function that will return the value associated with the key. That's it for the basic usage.
@@ -155,7 +155,7 @@ The replacements correlate to the index in the brackets so you can add multiple 
 
 ## More Code
 
-The `LocalisedClass` mixin can be used in services as well, the exact same way. Which will allow you to throw localised exceptions or show localised dialogs easily as well.
+The `LocalisedMixin` mixin can be used in services as well, the exact same way. Which will allow you to throw localised exceptions or show localised dialogs easily as well.
 
 ```dart
 throw Exception(translate(ApiStrings.serialisationError));

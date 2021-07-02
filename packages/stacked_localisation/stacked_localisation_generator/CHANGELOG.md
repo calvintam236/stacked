@@ -1,3 +1,7 @@
+## 0.1.0+2
+
+- `asset/lang` -> `asset/l10n`
+
 ## 0.1.0+1
 
 - Changes path package dependency from 1.7.0 -> 1.6.4 because flutter_test package to fix weird error
